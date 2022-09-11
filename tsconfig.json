@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "src",
+    "allowJs": true,
+    "target": "es2021",
+    "module": "es2022",
+    "allowSyntheticDefaultImports": true,  // allow default imports from modules with no default export. This does not affect code emit, just typechecking.
+    "esModuleInterop": true,
+    "moduleResolution": "node",  // find modules in node_modules - https://github.com/Microsoft/TypeScript/issues/8189#issuecomment-212079251
+    "types": ["node"],  // Influx uses built-in node modules like http or url
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "lib": ["es2021"],
+    "importHelpers": true
+  },
+  "include": [
+    "src/*.ts",
+    "src/**/*"
+  ],
+  "exclude": ["node_modules"]
+}
