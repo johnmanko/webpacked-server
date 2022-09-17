@@ -51,7 +51,7 @@
     "start": "npm run build && NODE_ENV=development node --experimental-specifier-resolution=node -r source-map-support/register ./dist/index.js",
     "clean": "rimraf ./dist/*",
     "build": "npm run clean && ./node_modules/typescript/bin/tsc",
-    "webpack-build": "npm run clean && npx webpack --config webpack.config.mjs"
+    "webpack-build": "npm run clean && npx webpack --config webpack.multi.cjs"
   },
   "engines": {
     "node": ">=18.0.0"

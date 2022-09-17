@@ -1,0 +1,1 @@
+export default "../util/thread-workers/worker";

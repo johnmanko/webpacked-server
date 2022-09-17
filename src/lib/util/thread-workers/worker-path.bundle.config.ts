@@ -1,0 +1,1 @@
+export default "./worker.bundle.mjs";

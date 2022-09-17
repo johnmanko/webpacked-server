@@ -1,15 +1,11 @@
-import path from 'path';
-import webpack from 'webpack';
-import { fileURLToPath } from 'url';
+const path = require('path');
+const webpack = require('webpack');
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-export default {
-    
+module.exports = {
+    name: 'image-worker',
     target: 'node',
     entry: {
-        index: './src/index.ts'
+        worker: './src/lib/util/thread-workers/worker.ts'
     },
     devtool: 'inline-source-map',
     node: {
@@ -24,10 +20,6 @@ export default {
           },
         },
         rules: [
-            {
-                test: /\.html$/i,
-                loader: "html-loader",
-            },
             {
                 test: /\.[jt]sx?$/,
                 resolve: {
